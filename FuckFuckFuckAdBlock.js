@@ -15,7 +15,8 @@
 		ajax.send();
 	}
 
-	setTimeout(function(){
+	var CC = setInterval(function(){
 		FFFAdBlock();
-	}, 5);
+		if(document.body.innerHTML == "") clearInterval(CC);
+	}, 10);
 })(window);
